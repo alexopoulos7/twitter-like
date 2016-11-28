@@ -1,0 +1,23 @@
+page-write {
+  ion-content {
+    background: #fff !important;
+  }
+  .alignleft {
+    float: left;
+    font-size: 1em;
+    padding-left: 20px;
+    padding-top: 5px;
+  }
+  .alignright {
+    float: right;
+    padding-right: 20px;
+  }
+  .storyarea {
+    box-sizing: border-box; /* fit parent width */
+    height: 100%;
+
+    textarea {
+      height: 100%;
+    }
+  }
+}

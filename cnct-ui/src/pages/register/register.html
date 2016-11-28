@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Register to Cnct</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card class="cards">
+            <ion-card-header>New User? Please register here.</ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <ion-label floating>*Email</ion-label>
+                <ion-input type="email" [(ngModel)]="newUsermail"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label floating>*Password</ion-label>
+                <ion-input type="password" [(ngModel)]="newPassword"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Name</ion-label>
+                <ion-input type="text" [(ngModel)]="name"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Sex</ion-label>
+                <ion-select [(ngModel)]="sex">
+                  <ion-option value="girl" selected="true">Girl</ion-option>
+                  <ion-option value="boy">Boy</ion-option>
+                </ion-select>
+              </ion-item>
+              <ion-item>
+                <button ion-button item-left color="default" block [@fadeIn] id="register-button" (click)="register()">Register</button>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

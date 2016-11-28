@@ -1,0 +1,40 @@
+page-library {
+   .card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+#contact-details {
+    font-family: 'Yellowtail', cursive;
+      font-size: 1.5rem; 
+      color: #6495ED;
+      -webkit-column-rule: #6495ED;
+      -moz-column-rule: #6495ED;
+      -o-column-rule: #6495ED;
+      column-rule: #6495ED;
+}
+/*
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }*/
+}

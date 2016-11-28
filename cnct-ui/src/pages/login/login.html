@@ -1,0 +1,36 @@
+<ion-content padding>
+  <h1 [@fadeInLeft]>
+    Connect to Cnct
+  </h1>
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card class="cards">
+            <ion-card-header>Sign In
+
+            </ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input type="email" [(ngModel)]="usermail"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input type="password" [(ngModel)]="password"></ion-input>
+              </ion-item>
+              <ion-item>
+                <button ion-button color="light" item-left id="login-button" (click)="login()">Sign In</button>
+
+              </ion-item>
+              <ion-item>
+                New User? <button ion-button color="dark" id="register-button" (click)="register()">Register</button>
+
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

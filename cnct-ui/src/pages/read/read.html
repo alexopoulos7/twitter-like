@@ -1,0 +1,82 @@
+<!--
+  Generated template for the Read page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Message Details</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div style="float: left; width: 100%;" padding text-center *ngIf="loadingMessage">
+    <ion-spinner></ion-spinner>
+  </div>
+  <div *ngIf="!loadingMessage && originalMessage">
+    <ion-card>
+      <ion-row id="originalMessage">
+        <ion-col width-30>
+          <ion-item>
+            <ion-icon name="person" item-left color="primary"></ion-icon>
+            {{originalMessage.users[0].email}}
+          </ion-item>
+        </ion-col>
+        <ion-col width-15>
+          <ion-item>{{originalMessage.createdAt | date:'short'}}
+          </ion-item>
+        </ion-col>
+        <ion-col width-20>
+          <ion-item>
+            <button ion-button (click)="like(originalMessage.id)"> <ion-badge class="likes" item-right>{{originalMessage.likes.length}}
+                <ion-icon name="happy" color="red"></ion-icon>
+              </ion-badge></button>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-card>{{originalMessage.text}}</ion-card>
+
+      <ion-row>
+        <div padding>
+          <button ion-button outline (click)="openMessageModal()">
+           Reply
+          </button>
+        </div>
+      </ion-row>
+
+      <ion-list *ngIf="showResponses" [@fadeInRight]>
+        <ion-item *ngFor="let m of responseMessages" text-wrap>
+          <ion-row id="contact-details">
+            <ion-col width-30>
+              <ion-item (click)="loadUserProfile(m.users[0].id)">
+                <ion-icon name="contact" item-left [style]="getRandomColor(m.users[0].email)"></ion-icon>
+                <div>{{m.users[0].email}}</div>
+              </ion-item>
+            </ion-col>
+            <ion-col width-15>
+              <ion-item>{{m.createdAt | date:'short'}}</ion-item>
+            </ion-col>
+            <ion-col width-20>
+              <ion-item>
+                <button ion-button (click)="like(m.id)"> <ion-badge class="likes" item-right>{{m.likes.length}}
+                <ion-icon name="happy" color="red"></ion-icon>
+              </ion-badge></button>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row row-center>
+
+            <ion-card id="text-ion-card">
+              <ion-card-content>
+                <p>{{m.text}}</p>
+              </ion-card-content>
+            </ion-card>
+
+          </ion-row>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
+</ion-content>

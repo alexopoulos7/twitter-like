@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Post your message (up to 200 characters)</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding [@flyInOutFast]>
+  <ion-textarea class="storyarea" placeholder="{{storyContentPlaceholder}}" [(ngModel)]="story.content" (keyup)="checkCountOfWords()"></ion-textarea>
+</ion-content>
+<ion-footer [@flyInOutFast]>
+  <div class="row ">
+    <p class="alignleft ">{{lettersCountLeft}} characters left</p>
+    <p class="alignright ">
+      <ion-item>
+        <button ion-button color="darkerPrimary" [disabled]="story.content.length>200" (click)="save()"> Save</button>
+
+        <button ion-button color="danger" (click)="dismiss()">Close</button>
+
+      </ion-item>
+
+    </p>
+  </div>
+</ion-footer>

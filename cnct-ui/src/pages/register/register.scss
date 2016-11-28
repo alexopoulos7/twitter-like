@@ -1,0 +1,39 @@
+@import "../../theme/mixins.scss";
+
+page-login {
+
+  h1 {
+    margin-top: 20% !important;
+    color: white;
+    font-size: 8rem;
+    text-align: center;
+    font-family: 'Yellowtail', cursive;
+  }
+  
+ion-card.cards ion-card-header {
+    color: map-get($colors, primary);
+  } 
+
+ 
+  #login-button {
+    position: absolute;
+    
+    width: 20%;
+    //left: 60%;
+    border-radius: 8px;
+  }
+  #register-button {
+    position: absolute;
+    
+    width: 20%;
+    //left: 60%;
+    border-radius: 8px;
+  }
+
+  ion-content {
+    background-image: url(/assets/img/cnct.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+  }
+}

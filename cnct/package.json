@@ -1,0 +1,48 @@
+{
+  "name": "cnct",
+  "version": "0.0.0",
+  "description": "A wannabe twitter app",
+  "private": true,
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha test --recursive",
+    "coverage": "node node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -- test/**/*.js",
+    "start": "node api/api.js"
+  },
+  "author": {
+    "name": "Angelos Alexopoulus",
+    "email": "alexopoulos7@gmail.com",
+    "url": "www.cnct.tria;.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "-",
+  "bugs": "-",
+  "dependencies": {
+    "basic-auth": "^1.0.4",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "fs": "0.0.2",
+    "nodemailer": "^2.6.4",
+    "oauth2orize": "^1.5.1",
+    "passport": "^0.3.2",
+    "passport-facebook-token": "^3.3.0",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
+    "path": "^0.12.7",
+    "pluralize": "^2.0.0",
+    "sails-memory": "*",
+    "sails-mysql": "^0.12.1",
+    "sails-postgresql": "^0.11.4",
+    "underscore": "^1.8.3",
+    "waterline": "^0.12.1",
+    "waterline-mysql": "^0.6.0"
+  },
+  "devDependencies": {
+    "istanbul": "*",
+    "mocha": "*",
+    "should": "*"
+  }
+}

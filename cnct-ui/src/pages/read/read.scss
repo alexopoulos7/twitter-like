@@ -1,0 +1,43 @@
+page-read {
+    .ion-label.label-md{
+        white-space: pre-wrap
+    }
+    .card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+    #text-ion-card {
+    position: relative;
+    text-align: center;
+    width: 80%;
+    height:20;
+    overflow-wrap: normal;
+    flex-wrap:wrap;
+    flex-wrap: normal; 
+  }
+#original-message {
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+}
+#message-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color:darkblue;
+}
+#contact-details {
+    font-family: 'Yellowtail', cursive;
+      font-size: 1.5rem; 
+      color: #6495ED;
+      -webkit-column-rule: #6495ED;
+      -moz-column-rule: #6495ED;
+      -o-column-rule: #6495ED;
+      column-rule: #6495ED;
+}
+}
